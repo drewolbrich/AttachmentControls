@@ -11,5 +11,15 @@
 		<key>UISceneConfigurations</key>
 		<dict/>
 	</dict>
+	<key>UILaunchPlacementParameters</key>
+	<dict>
+		<key>PreferredLaunchSize</key>
+		<dict>
+			<key>Width</key>
+			<integer>500</integer>
+			<key>Height</key>
+			<integer>500</integer>
+		</dict>
+	</dict>
 </dict>
 </plist>

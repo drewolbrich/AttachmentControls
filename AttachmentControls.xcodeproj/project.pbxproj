@@ -7,20 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AA8D18B2AACD49E00AE39CF /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA8D18A2AACD49E00AE39CF /* RealityKitContent */; };
 		3AA8D18D2AACD49E00AE39CF /* AttachmentControlsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */; };
-		3AA8D18F2AACD49E00AE39CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8D18E2AACD49E00AE39CF /* ContentView.swift */; };
 		3AA8D1912AACD49F00AE39CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA8D1902AACD49F00AE39CF /* Assets.xcassets */; };
-		3AA8D1942AACD49F00AE39CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA8D1932AACD49F00AE39CF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3AA8D1852AACD49E00AE39CF /* AttachmentControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttachmentControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AA8D1892AACD49E00AE39CF /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentControlsApp.swift; sourceTree = "<group>"; };
-		3AA8D18E2AACD49E00AE39CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AA8D1902AACD49F00AE39CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3AA8D1932AACD49F00AE39CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AA8D1952AACD49F00AE39CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA8D18B2AACD49E00AE39CF /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				3AA8D1872AACD49E00AE39CF /* AttachmentControls */,
-				3AA8D1882AACD49E00AE39CF /* Packages */,
 				3AA8D1862AACD49E00AE39CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,28 +49,10 @@
 			isa = PBXGroup;
 			children = (
 				3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */,
-				3AA8D18E2AACD49E00AE39CF /* ContentView.swift */,
 				3AA8D1902AACD49F00AE39CF /* Assets.xcassets */,
 				3AA8D1952AACD49F00AE39CF /* Info.plist */,
-				3AA8D1922AACD49F00AE39CF /* Preview Content */,
 			);
 			path = AttachmentControls;
-			sourceTree = "<group>";
-		};
-		3AA8D1882AACD49E00AE39CF /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				3AA8D1892AACD49E00AE39CF /* RealityKitContent */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
-		3AA8D1922AACD49F00AE39CF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				3AA8D1932AACD49F00AE39CF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +72,6 @@
 			);
 			name = AttachmentControls;
 			packageProductDependencies = (
-				3AA8D18A2AACD49E00AE39CF /* RealityKitContent */,
 			);
 			productName = AttachmentControls;
 			productReference = 3AA8D1852AACD49E00AE39CF /* AttachmentControls.app */;
@@ -142,7 +115,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA8D1942AACD49F00AE39CF /* Preview Assets.xcassets in Resources */,
 				3AA8D1912AACD49F00AE39CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +126,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA8D18F2AACD49E00AE39CF /* ContentView.swift in Sources */,
 				3AA8D18D2AACD49E00AE39CF /* AttachmentControlsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +259,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AttachmentControls/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -313,7 +284,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AttachmentControls/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -353,13 +324,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3AA8D18A2AACD49E00AE39CF /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AA8D17D2AACD49E00AE39CF /* Project object */;
 }
