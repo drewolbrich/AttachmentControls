@@ -14,7 +14,7 @@ import RealityKit
 ///
 /// Repro steps:
 ///
-/// 1. Launch the app.
+/// 1. Run the app in Xcode, in the visionOS simulator.
 /// 2. Move the app's window to the left side of the simulator screen.
 /// 3. Select the window's Open Volume button.
 /// 4. In the volume that appears, select the New Color button.
