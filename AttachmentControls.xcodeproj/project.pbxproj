@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AA8D18D2AACD49E00AE39CF /* AttachmentControlsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */; };
 		3AA8D1912AACD49F00AE39CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA8D1902AACD49F00AE39CF /* Assets.xcassets */; };
+		3AA8D1A02AACE26500AE39CF /* excited-kid.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3AA8D19F2AACE26500AE39CF /* excited-kid.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentControlsApp.swift; sourceTree = "<group>"; };
 		3AA8D1902AACD49F00AE39CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA8D1952AACD49F00AE39CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA8D19F2AACE26500AE39CF /* excited-kid.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "excited-kid.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				3AA8D18C2AACD49E00AE39CF /* AttachmentControlsApp.swift */,
 				3AA8D1902AACD49F00AE39CF /* Assets.xcassets */,
 				3AA8D1952AACD49F00AE39CF /* Info.plist */,
+				3AA8D19F2AACE26500AE39CF /* excited-kid.gif */,
 			);
 			path = AttachmentControls;
 			sourceTree = "<group>";
@@ -115,6 +118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA8D1A02AACE26500AE39CF /* excited-kid.gif in Resources */,
 				3AA8D1912AACD49F00AE39CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
