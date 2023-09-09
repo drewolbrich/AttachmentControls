@@ -19,18 +19,29 @@ struct AttachmentControlsApp: App {
     let attachmentID = "attachmentID"
 
     let volumeSize: Float = 0.7
+    
+    @State var volumeIsOpen = false
+    
+    @State var sphereEntity: ModelEntity?
 
     var body: some SwiftUI.Scene {
         // Main app window
         WindowGroup() {
             VStack(spacing: 20) {
                 Button {
-                    openWindow(id: volumeGroupID)
+                    // Don't open more than one volume.
+                    if !volumeIsOpen {
+                        openWindow(id: volumeGroupID)
+                        volumeIsOpen = true
+                    }
                 } label: {
                     Text("Open Volume")
                 }
                 Button {
-                    dismissWindow(id: volumeGroupID)
+                    if volumeIsOpen {
+                        dismissWindow(id: volumeGroupID)
+                        volumeIsOpen = false
+                    }
                 } label: {
                     Text("Dismiss Volume")
                 }
@@ -38,9 +49,13 @@ struct AttachmentControlsApp: App {
         }
         
         // Volume
-        WindowGroup(id: volumeGroupID, for: UUID.self) { id in
+        WindowGroup(id: volumeGroupID) {
             RealityView { content, attachments in
-                content.addSphere(with: .orange, radius: volumeSize/2 - 0.1)
+                let sphereEntity = createSphereEntity(withRadius: volumeSize/2 - 0.1)
+                self.sphereEntity = sphereEntity
+                content.add(sphereEntity)
+                
+                setRandomColor(for: sphereEntity)
                 
                 if let sceneAttachment = attachments.entity(for: attachmentID) {
                     sceneAttachment.position = [0, 0, volumeSize/2 - 0.05]
@@ -51,9 +66,10 @@ struct AttachmentControlsApp: App {
             } attachments: {
                 Attachment(id: "attachmentID") {
                     Button {
-                        print("The button was selected.")
+                        assert(sphereEntity != nil)
+                        setRandomColor(for: sphereEntity ?? ModelEntity())
                     } label: {
-                        Text("Button")
+                        Text("New Color")
                             .font(.extraLargeTitle)
                             .padding(40)
                     }
@@ -64,20 +80,38 @@ struct AttachmentControlsApp: App {
         .defaultSize(Size3D(width: volumeSize, height: volumeSize, depth: volumeSize), in: .meters)
     }
 
-}
-
-extension RealityViewContent {
-    
-    /// Adds a sphere to a `RealityViewContent` struct.
-    func addSphere(with color: UIColor, radius: Float) {
+    func createSphereEntity(withRadius radius: Float) -> ModelEntity {
         let meshResource = MeshResource.generateSphere(radius: radius)
+        return ModelEntity(mesh: meshResource, materials: [])
+    }
+    
+    func setRandomColor(for modelEntity: ModelEntity) {
+        guard var model = modelEntity.model else {
+            assertionFailure("model is undefined")
+            return
+        }
+        
+        let color = UIColor.random()
+        
         var material = PhysicallyBasedMaterial()
         material.baseColor = .init(tint: color, texture: nil)
-        let modelEntity = ModelEntity(mesh: meshResource, materials: [material])
-        let shapeResource = ShapeResource.generateSphere(radius: radius)
-        modelEntity.components.set(CollisionComponent(shapes: [shapeResource]))
-        modelEntity.components.set(InputTargetComponent())
-        self.add(modelEntity)
+
+        model.materials = [material]
+        
+        modelEntity.model = model
     }
     
 }
+
+extension UIColor {
+    
+    static func random() -> UIColor {
+        func random() -> CGFloat {
+            return CGFloat(arc4random())/CGFloat(UInt32.max)
+        }
+        
+        return UIColor(hue: random(), saturation: 0.6, brightness: 0.9, alpha: 1)
+    }
+    
+}
+
