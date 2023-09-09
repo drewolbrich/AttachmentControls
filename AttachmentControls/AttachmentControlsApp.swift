@@ -18,7 +18,7 @@ struct AttachmentControlsApp: App {
 
     let attachmentID = "attachmentID"
 
-    let volumeSize: Float = 0.5
+    let volumeSize: Float = 0.7
 
     var body: some SwiftUI.Scene {
         // Main app window
@@ -40,18 +40,23 @@ struct AttachmentControlsApp: App {
         // Volume
         WindowGroup(id: volumeGroupID, for: UUID.self) { id in
             RealityView { content, attachments in
-                content.addSphere(with: .orange, radius: volumeSize/2 - 0.02)
+                content.addSphere(with: .orange, radius: volumeSize/2 - 0.1)
                 
                 if let sceneAttachment = attachments.entity(for: attachmentID) {
-                    sceneAttachment.position = [0, 0, volumeSize/2 - 0.01]
+                    sceneAttachment.position = [0, 0, volumeSize/2 - 0.05]
                     content.add(sceneAttachment)
                 } else {
                     assertionFailure("sceneAttachment is undefined")
                 }
             } attachments: {
                 Attachment(id: "attachmentID") {
-                    Text("Attachment")
-                        .font(.extraLargeTitle)
+                    Button {
+                        print("The button was selected.")
+                    } label: {
+                        Text("Button")
+                            .font(.extraLargeTitle)
+                            .padding(40)
+                    }
                 }
             }
         }
