@@ -1,6 +1,6 @@
 # FB13143132
 
-If a RealityView in a volume has an attachment with controls, often the attachment's controls will not respond to user input.
+In visionOS, if a RealityView in a volume has an attachment with controls, often the attachment's controls will not respond to user input.
 
 ![screenshot](https://github.com/drewolbrich/AttachmentControls/assets/12141562/0e863bd1-ced7-4005-84d0-e84a25df88e5)
 
