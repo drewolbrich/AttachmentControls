@@ -13,11 +13,11 @@ visionOS 1.0 beta 3 (Xcode 15 beta 8)
 3. Select the window's Open Volume button.
 4. In the volume that appears, select the New Color button.
 
-## Expected behavior
+### Expected behavior
 
 The color of the sphere in the volume changes to a random color.
 
-## Observed behavior
+### Observed behavior
 
 The Open Volume button doesn't work, and the sphere does not
 change color. Furthermore, the Open Volume's hover effect does not appear.
