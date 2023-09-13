@@ -2,7 +2,7 @@
 
 In visionOS, if a RealityView in a volume has an attachment with controls, often the attachment's controls will not respond to user input.
 
-visionOS 1.0 beta 3 (Xcode 15 bete 8)
+visionOS 1.0 beta 3 (Xcode 15 beta 8)
 
 ![screenshot](https://github.com/drewolbrich/AttachmentControls/assets/12141562/0e863bd1-ced7-4005-84d0-e84a25df88e5)
 
