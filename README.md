@@ -11,9 +11,9 @@ If a RealityView in a volume has an attachment with controls, often the attachme
 3. Select the window's Open Volume button.
 4. In the volume that appears, select the New Color button.
 
-Expected behavior: The color of the sphere in the volume changes to a random color.
+**Expected behavior:** The color of the sphere in the volume changes to a random color.
 
-Observed behavior: The Open Volume button doesn't work, and the sphere does not
+**Observed behavior:** The Open Volume button doesn't work, and the sphere does not
 change color. Furthermore, the Open Volume's hover effect does not appear.
 
 The observed behavior described above only happens about 1/4 of the time.
