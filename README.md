@@ -30,3 +30,7 @@ If the sphere does change color, follow these steps:
 3. Select the New Color button again.
 
 It may be necessary to repeat these steps several times before the observed behavior occurs.
+
+### Use case:
+
+![screenshot](https://github.com/drewolbrich/AttachmentControls/assets/12141562/94c69774-3b45-4d64-b17f-3283d0947dc0)
